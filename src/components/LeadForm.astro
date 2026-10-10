@@ -32,7 +32,14 @@ import { site, services } from "@/data/site";
   <label>
     {site.niche.projectFieldLabel}
     {site.niche.projectFieldType === "textarea" && (
-      <textarea name="projectDetails" required maxlength="3000"></textarea>
+      <textarea
+        name="projectDetails"
+        required
+        minlength="1"
+        maxlength="3000"
+        pattern=".*\S.*"
+        title="Enter a brief description of your property or project."
+      ></textarea>
     )}
     {site.niche.projectFieldType === "number" && (
       <input type="number" name="projectDetails" min="1" required />

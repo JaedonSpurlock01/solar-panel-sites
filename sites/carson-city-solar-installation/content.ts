@@ -3,7 +3,7 @@ import type { HomeContent, SupportingContent } from "../../src/data/content-type
 export const homeContent: HomeContent = {
   seoTitle: "Solar Panel Installation Carson City, NV | Free Estimate",
   metaDescription:
-    "Request a free solar panel installation estimate in Carson City, Nevada. Get a property-specific starting point for design, permitting, installation, and interconnection.",
+    "Request a free solar panel installation estimate in Carson City, Nevada. Start planning your design, permits, installation, and grid connection.",
   hero: {
     eyebrow: "Carson City, Nevada solar planning",
     h1: "Solar Panel Installation Designed Around Your Carson City Property",
@@ -14,9 +14,9 @@ export const homeContent: HomeContent = {
     eyebrow: "A better starting point",
     heading: "Plan the whole solar project—not just the panel count",
     paragraphs: [
-      "Solar panel installation in Carson City starts with more than choosing equipment from a catalog. A useful plan connects your energy use to the space available on the property, the condition of the mounting surface, the electrical path, local review, and NV Energy’s interconnection process. Each of those details can change the layout, schedule, and price.",
+      "Solar panel installation in Carson City starts with more than choosing equipment from a catalog. A useful plan looks at your energy use, available space, roof or ground conditions, wiring, city permits, and NV Energy’s grid connection process. Each detail can change the layout, schedule, and price.",
       "Carson City Solar Installation gives local property owners a direct way to begin that conversation. Bring recent electric bills if you have them, explain why you are considering solar, and share what you know about the roof, shade, and electrical service. The first goal is to identify the questions that must be answered before anyone treats a concept as an installation-ready design.",
-      "This site focuses on solar panel installation within Carson City. It does not promise a specific savings percentage, payback period, production figure, incentive, or completion date before the property and current rules are reviewed. That practical approach helps you compare proposals using scope and assumptions instead of broad sales claims.",
+      "This site focuses on solar panel installation in Carson City. It does not promise exact savings, power output, tax benefits, or a finish date before the property and current rules are reviewed. This helps you compare quotes by looking at the plan and its details instead of broad sales claims.",
     ],
   },
   principles: [
@@ -25,7 +25,7 @@ export const homeContent: HomeContent = {
       text: "Roof planes, shade, access, electrical equipment, and expected energy demand shape the conversation from the beginning.",
     },
     {
-      heading: "Clear project variables",
+      heading: "Clear project details",
       text: "Understand what can affect design, permitting, utility review, installation, inspection, timing, and price.",
     },
     {
@@ -37,16 +37,16 @@ export const homeContent: HomeContent = {
     eyebrow: "Focused services",
     heading: "Solar installation, repair, and cleaning in Carson City",
     introduction:
-      "Explore property-specific solar panel installation, diagnostic repair, and panel cleaning. Each service page explains the relevant conditions, process, pricing variables, and questions to ask before work begins.",
+      "Explore solar panel installation, repair, and cleaning for your property. Each service page explains the process, what can change the price, and what to ask before work begins.",
   },
   localSections: [
     {
       eyebrow: "High-desert conditions",
-      heading: "Design for bright summers, cold winters, and real site constraints",
+      heading: "Plan for bright summers, cold winters, and the property",
       paragraphs: [
         "Carson City has a dry, high-desert climate with many clear days, but good solar planning still depends on more than annual sunshine. Winter brings shorter days, cold temperatures, and occasional snow. Wind exposure, temperature swings, roof slope, and surrounding terrain can also influence mounting and structural decisions. An annual production discussion should account for seasonal change rather than multiplying one perfect day across the year.",
-        "Solar modules can produce electricity in cold weather when sunlight reaches them. Snow cover, clouds, short winter days, and shade can temporarily reduce output. A steeper surface may shed snow differently than a low-slope roof, while valleys, roof intersections, and nearby obstructions can hold it longer. The final layout should follow the property and approved engineering instead of a universal tilt rule.",
-        "Roof condition matters just as much as sunlight. Installing an array on a roof that may need replacement soon can create avoidable removal and reinstallation work. Before the project advances, identify the roof material, approximate age, visible damage, and any history of leaks or repairs. Structural documentation may be required as part of local review, and the responsible professionals should evaluate the actual building.",
+        "Solar panels can make electricity in cold weather when sunlight reaches them. Snow cover, clouds, short winter days, and shade can lower output for a time. A steep roof may shed snow faster than a low-slope roof, while roof valleys and nearby objects can hold it longer. The final layout should fit the property and approved design.",
+        "Roof condition matters just as much as sunlight. Putting panels on a roof that may need replacement soon can lead to extra removal and reinstallation work. Before moving ahead, note the roof material, age, visible damage, and past leaks or repairs. Carson City may ask for engineering papers that show the roof can support the system.",
       ],
       bullets: [
         "Seasonal shade and winter sun angle",
@@ -59,12 +59,12 @@ export const homeContent: HomeContent = {
     },
     {
       eyebrow: "Sizing and layout",
-      heading: "Connect the array concept to how the property uses electricity",
+      heading: "Match the system plan to the property’s power use",
       paragraphs: [
         "Recent utility bills give the planning conversation a factual baseline. Twelve months is useful because electricity use can rise and fall with weather, occupancy, appliances, and equipment. A single bill may hide those changes. If twelve months is not available, bring whatever history you have and note anything unusual about the period.",
         "Future loads matter too. An electric vehicle, heat pump, workshop equipment, addition, or change in occupancy could increase consumption after installation. That does not mean every project should maximize panel count. It means the estimate should acknowledge known changes instead of sizing only around yesterday’s use.",
         "Usable installation area can limit or reshape the concept. Vents, chimneys, skylights, setbacks, shade, ridges, and roof geometry affect rooftop layouts. A ground-mounted option raises different questions about land, trenching, foundations, grading, setbacks, and the distance to electrical equipment. The strongest starting point combines energy information with an honest view of the property.",
-        "Production estimates are models, not guarantees. They depend on the assumptions used for weather, shade, orientation, equipment, losses, and system availability. When comparing proposals, ask whether the same assumptions are being used and whether the estimate clearly identifies them.",
+        "Power estimates are helpful guides, not guarantees. They depend on weather, shade, roof direction, equipment, and system losses. When comparing quotes, ask which facts each estimate uses.",
       ],
       imageIndex: 1,
       imageAlt: "Solar array layout planning for a Carson City property",
@@ -73,29 +73,29 @@ export const homeContent: HomeContent = {
       eyebrow: "Permits and connection",
       heading: "Leave room in the schedule for review, inspection, and utility steps",
       paragraphs: [
-        "Carson City’s Building Division manages construction permitting through its permit process. A photovoltaic project can require plan information covering structural and electrical work. The exact package depends on the system and property. Historic District properties may need an additional design review, so the project address matters before a timeline is presented as final.",
-        "Grid-connected installations also move through NV Energy’s interconnection process. Carson City falls within the northern Nevada service territory described by Sierra Pacific Power Company. Current utility materials direct applicants through an online workflow and list technical and documentation requirements. Fees, forms, equipment standards, and review steps can change, which is why current source material should guide each application.",
-        "Permit approval does not by itself mean a system can begin operating with the grid. Physical installation, local inspection, utility requirements, and permission to operate are related but distinct milestones. Ask an installer to explain who prepares each submission, who responds to corrections, what the estimate includes, and which outside review periods remain outside the installer’s control.",
-        "A clear scope reduces confusion. It should identify design responsibilities, permit tasks, installation work, inspections, utility coordination, and closeout steps. If any of those items are excluded, you should know before accepting an estimate.",
+        "Carson City’s Building Division reviews construction permits. A solar project may need roof and electrical plans. The exact permit package depends on the system and property. Homes in the Historic District may need another design review, so the project address can affect the timeline.",
+        "Grid-connected systems also go through NV Energy’s connection process. Forms, fees, equipment rules, and review steps can change. The project team should check the latest utility rules for each job.",
+        "A city permit does not mean the system can be turned on right away. Installation, city inspection, utility review, and approval to operate are separate steps. Ask who handles each step, who fixes requested changes, and which wait times are outside the installer’s control.",
+        "A clear written plan prevents confusion. It should list the design work, permits, installation, inspections, grid connection work, and final steps. You should know about anything that is not included before you accept the estimate.",
       ],
       imageIndex: 2,
-      imageAlt: "Solar permit and utility interconnection planning in Carson City",
+      imageAlt: "Solar permit and utility connection planning in Carson City",
     },
     {
       eyebrow: "Homes and other properties",
       heading: "Different buildings create different installation questions",
       paragraphs: [
-        "A single-family home may offer several roof planes with different sun exposure, along with limited space near the existing service equipment. The owner may be balancing current electricity use, future household plans, roof life, and the visual effect of the array. Access around landscaping, fencing, and neighboring structures can influence field work.",
-        "A small business or income property may have larger daytime loads, different roof construction, tenant considerations, or operating constraints. Commercial review and engineering can differ from residential work. Property managers may also need to coordinate ownership approvals, roof warranties, access, and work hours before installation.",
-        "The customer type does not replace a site review. A large roof can still have shade or structural constraints, and a small roof can sometimes offer a straightforward usable plane. Share how the building operates and what disruptions matter. That context helps frame the estimate around the property rather than forcing every project into the same template.",
+        "A single-family home may have several roof sections with different sun exposure and limited space near the main electrical panel. The owner may be weighing current power use, future needs, roof life, and how the panels will look. Landscaping, fences, and nearby buildings can also affect access.",
+        "A small business or rental property may use more power during the day, have a different roof, or need work to happen at certain times. Business projects can need a different review than home projects. Property managers may also need owner approval and must check roof coverage, access, and work hours before installation.",
+        "Every property still needs its own review. A large roof can have shade or need added support, while a small roof may have plenty of open space. Explain how the building is used and when work would cause problems. Those details help shape an estimate for the property.",
       ],
     },
     {
       eyebrow: "Equipment decisions",
       heading: "Compare complete systems and documented assumptions",
       paragraphs: [
-        "Panels attract most of the attention, but mounting hardware, inverter equipment, conductors, disconnects, labeling, monitoring, and service-equipment integration all contribute to the installation. Component compatibility and the approved design matter more than selecting one specification in isolation.",
-        "Ask how the proposed system responds to shade and roof geometry, where equipment would be placed, and how technicians would access it. Ask what manufacturer documentation applies and what product or workmanship coverage is actually included in writing. This website does not state a warranty because no specific warranty terms were provided for publication.",
+        "Panels attract most of the attention, but mounts, inverters, wiring, shutoff switches, labels, monitoring, and the main electrical panel all matter. Every part must work with the rest of the approved design.",
+        "Ask how the system will handle shade and your roof shape, where equipment will go, and how workers will reach it. Ask which maker instructions apply and what coverage is included in writing. This website does not state a warranty because no warranty terms were provided.",
         "If backup power or battery storage interests you, mention it during the initial conversation so electrical planning can consider that goal. Battery installation is not listed here as a confirmed standalone service. The estimate should clearly state whether storage is included, excluded, or requires a separate provider.",
       ],
     },
@@ -110,8 +110,8 @@ export const homeContent: HomeContent = {
       text: "Examine usable area, mounting conditions, access, roof condition, obstructions, and the information needed for technical planning.",
     },
     {
-      heading: "Define the scope",
-      text: "Develop a written estimate that identifies assumptions, included work, exclusions, review steps, equipment, and project variables.",
+      heading: "Build the written plan",
+      text: "Get a written estimate that lists the facts used, included work, items not included, review steps, equipment, and things that may change.",
     },
     {
       heading: "Move through approvals",
@@ -122,15 +122,15 @@ export const homeContent: HomeContent = {
     eyebrow: "Solar installation cost",
     heading: "Why a Carson City solar estimate needs property details",
     paragraphs: [
-      "Solar panel installation cost depends on more than the number of modules. System capacity is important, but mounting, roof condition, electrical work, access, equipment selection, engineering, and the path to the utility connection can change the scope. A low headline number may omit work that becomes necessary later.",
-      "Written estimates make comparison easier. Look for a description of the proposed capacity, major components, mounting method, electrical work, permit and utility tasks, inspection support, and exclusions. Check whether roof work, service changes, trenching, or design revisions would be handled through allowances or change orders.",
-      "Incentive information deserves current verification. Federal and state policy can change, and eligibility depends on timing and taxpayer circumstances. Current IRS guidance says the residential clean energy credit is not available for property placed in service after December 31, 2025. Do not rely on older local pages that still advertise a 30 percent residential credit for a new 2026 installation. Consult official sources and a qualified tax professional for your situation.",
+      "Solar panel installation cost depends on more than the number of panels. System size matters, but so do the mounts, roof condition, electrical work, access, equipment, engineering, and route to the utility connection. A low starting price may leave out work that is needed later.",
+      "Written estimates make quotes easier to compare. Look for the planned system size, main parts, mounting method, electrical work, permit tasks, utility steps, inspection help, and items not included. Ask how extra roof work, electrical changes, trenching, or design changes would affect the price.",
+      "Tax credit information needs a current check. Federal and state rules can change, and each taxpayer is different. Current IRS guidance says the residential clean energy credit is not available for new systems placed in service after December 31, 2025. Do not rely on old pages that still advertise a 30 percent residential credit for a new 2026 installation. Check IRS sources and ask a tax professional.",
       "A free estimate can still require follow-up before it becomes a final contract price. Unknown structural conditions, utility requirements, permit corrections, or electrical upgrades may need additional evaluation. Ask which findings could change the price and how those changes would be documented.",
     ],
     factors: [
       {
-        heading: "System scope",
-        text: "Proposed capacity, array count, component selection, layout complexity, and monitoring choices affect material and design needs.",
+        heading: "System size and parts",
+        text: "System size, panel count, equipment choices, layout, and monitoring affect the materials and design.",
       },
       {
         heading: "Mounting conditions",
@@ -138,7 +138,7 @@ export const homeContent: HomeContent = {
       },
       {
         heading: "Electrical work",
-        text: "Service equipment, conductor routes, disconnect locations, and required upgrades can alter the installation scope.",
+        text: "The main electrical panel, wire routes, shutoff locations, and needed upgrades can change the work and price.",
       },
       {
         heading: "Review and scheduling",
@@ -160,10 +160,10 @@ export const homeContent: HomeContent = {
     {
       question: "Does a Carson City solar project need permits?",
       answer:
-        "Solar work generally requires local review and inspection. Structural and electrical documentation may be part of the submittal, and Historic District properties may face an additional review. Confirm current requirements for the project address.",
+        "Solar work usually needs city review and inspection. The permit package may need roof and electrical plans. Historic District properties may need another review. Check the current rules for the project address.",
     },
     {
-      question: "How does an NV Energy interconnection fit into the project?",
+      question: "How does the NV Energy grid connection fit into the project?",
       answer:
         "A grid-connected system must follow the utility’s current application and technical process. Installation, local inspection, utility review, and permission to operate are separate milestones. The specific sequence depends on the project.",
     },
@@ -175,7 +175,7 @@ export const homeContent: HomeContent = {
     {
       question: "Is the federal 30 percent residential solar credit available in 2026?",
       answer:
-        "Current IRS guidance says the Residential Clean Energy Credit is not available for new property placed in service after December 31, 2025. Tax rules and individual circumstances can be complex, so verify current official guidance and consult a qualified tax professional.",
+        "Current IRS guidance says the Residential Clean Energy Credit is not available for new systems placed in service after December 31, 2025. Tax rules can be hard to follow, so check the latest IRS guidance and ask a tax professional.",
     },
     {
       question: "What should I prepare before requesting an estimate?",
@@ -189,7 +189,7 @@ export const supportingContent: SupportingContent = {
   about: {
     seoTitle: "About Carson City Solar Installation | Carson City, NV",
     metaDescription:
-      "Learn how Carson City Solar Installation approaches property-specific solar estimates, clear project scope, local conditions, and practical next steps.",
+      "Learn how Carson City Solar Installation approaches solar estimates, clear written plans, local conditions, and practical next steps.",
     h1: "A Practical Starting Point for Carson City Solar Projects",
     introduction:
       "Carson City Solar Installation connects local property owners with a focused solar panel installation inquiry process. We publish useful planning information, ask for the details that shape a project, and avoid promises that require a site-specific review.",
@@ -198,13 +198,13 @@ export const supportingContent: SupportingContent = {
         heading: "Why property details come first",
         paragraphs: [
           "A solar project sits at the intersection of a building, an electrical system, local review, utility requirements, and the owner’s goals. No business history or project count was provided for publication, so this page does not invent one. Instead, it explains the standard we want each inquiry to support: a clear conversation grounded in the property.",
-          "Recent energy use, roof or land conditions, shade, access, and electrical equipment help identify the likely scope. The formal design, engineering, permits, equipment, and schedule must follow the actual project. Starting with the right questions helps property owners compare written estimates more carefully.",
+          "Recent energy use, roof or land conditions, shade, access, and electrical equipment help shape the plan. The final design, permits, equipment, and schedule must fit the actual property. Starting with the right questions helps owners compare written estimates.",
         ],
       },
       {
         heading: "Local information without inflated promises",
         paragraphs: [
-          "Carson City’s sunshine makes solar worth evaluating, while cold winters, snow, wind, roof conditions, local permits, and NV Energy interconnection still matter. We discuss those conditions without promising a universal savings figure, payback period, or production result.",
+          "Carson City’s sunshine makes solar worth a look, but cold winters, snow, wind, roof conditions, local permits, and the NV Energy grid connection still matter. We explain those issues without promising exact savings, a payback date, or a set amount of power.",
           "Incentives also change. Current IRS guidance ended the federal residential credit for new property placed in service after December 31, 2025. We encourage every customer to check official sources and obtain qualified financial or tax advice rather than treating an installer’s marketing page as tax guidance.",
         ],
       },
@@ -216,25 +216,25 @@ export const supportingContent: SupportingContent = {
       },
       {
         heading: "Quality",
-        text: "Treat the array, mounting, electrical work, documentation, inspection, and closeout as parts of one complete project.",
+        text: "Treat the panels, mounts, electrical work, permits, inspection, and final steps as one complete project.",
       },
       {
         heading: "Excellence",
-        text: "Aim for organized communication and a written scope that property owners can understand and compare.",
+        text: "Use clear updates and a written plan that property owners can understand and compare.",
       },
       {
         heading: "Safety",
-        text: "Respect the approved design, property conditions, electrical hazards, roof access, and applicable review requirements.",
+        text: "Follow the approved design, protect the property, work safely, and meet city and utility rules.",
       },
     ],
   },
   contact: {
     seoTitle: "Free Solar Estimate in Carson City, NV | Contact Us",
     metaDescription:
-      "Contact Carson City Solar Installation at (775) 306-4278 or request a free solar panel installation estimate for a Carson City property.",
-    h1: "Request a Free Solar Installation Estimate",
+      "Contact Carson City Solar Installation at (775) 306-4278 for a free installation estimate or to request solar panel repair or cleaning.",
+    h1: "Request a Free Solar Estimate or Service",
     introduction:
-      "Tell us about your Carson City property and what you want to learn about solar panel installation. Include any details you know; an initial request does not need to answer every technical question.",
+      "Tell us whether you need solar panel installation, repair, or cleaning in Carson City. Share what you know about the property and system. You do not need every detail to get started.",
     expectations: [
       "Share the property type and whether you are considering a roof or ground installation.",
       "Mention the roof material and approximate age if you know them.",

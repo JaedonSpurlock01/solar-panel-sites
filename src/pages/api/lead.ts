@@ -40,10 +40,10 @@ export const POST: APIRoute = async ({ request }) => {
   const validPhone = phone.replace(/\D/g, "").length >= 10;
   const validProjectField =
     site.niche.projectFieldType === "number"
-      ? Number(projectDetails) > 0
+      ? Number.isFinite(Number(projectDetails)) && Number(projectDetails) > 0
       : site.niche.projectFieldType === "select"
         ? Boolean(site.niche.projectFieldOptions?.includes(projectDetails))
-        : projectDetails.length > 9;
+        : projectDetails.length >= 1;
 
   if (
     !name ||

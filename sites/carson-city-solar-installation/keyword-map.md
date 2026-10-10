@@ -65,9 +65,13 @@ Primary cluster:
 
 - solar panel repair Carson City NV — transactional — high
 - solar repair Carson City — transactional — high
+- solar repair near me — transactional/local — high
 - solar panel troubleshooting Carson City — transactional — medium
+- solar inverter repair Carson City — transactional — medium
 - fix solar panels Carson City Nevada — transactional — medium
 - solar panels not producing — problem/diagnostic — medium
+- solar panels not working — problem/diagnostic — medium
+- solar monitoring app error — problem/diagnostic — medium
 
 Search intent: The searcher has damaged panels, alerts, an unexpected production change, or another system concern and wants diagnosis and repair. The page should distinguish repair from cleaning and avoid promising a diagnosis before inspection.
 
@@ -77,9 +81,12 @@ Primary cluster:
 
 - solar panel cleaning Carson City NV — transactional — high
 - solar cleaning service Carson City — transactional — high
+- professional solar panel cleaning near me — transactional/local — high
 - clean rooftop solar panels Carson City — transactional — medium
+- solar panel cleaning cost Carson City — commercial investigation — medium
 - remove dust from solar panels Nevada — problem/maintenance — medium
 - how often to clean solar panels Carson City — informational — medium
+- bird droppings on solar panels — problem/informational — medium
 
 Search intent: The searcher sees high-desert dust or other surface buildup and wants safe professional cleaning. The page should explain that cleaning frequency and production effects vary by property and system conditions.
 
@@ -198,10 +205,12 @@ Observed local-result competitors and directories included Dr. Shock Electric, F
 
 1. Publish and index the homepage for the core local installation cluster.
 2. Publish the solar panel installation page for process, property, and project-detail intent.
-3. Use the homepage FAQ for permits, winter production, price factors, roof readiness, interconnection, estimates, and the post-2025 federal credit change.
-4. Keep contact intent consolidated on `/contact/`.
-5. Confirm any additional service before creating another service page.
-6. Validate demand later with Search Console and a keyword-data provider; update priorities from actual impressions and leads.
+3. Publish the repair page for damaged panels, low production, inverter, and monitoring-error intent.
+4. Publish the cleaning page for dust, pollen, ash, bird-dropping, cleaning-frequency, and cost intent.
+5. Use the homepage FAQ for permits, winter production, price factors, roof readiness, grid connection, estimates, and the post-2025 federal credit change.
+6. Keep contact intent consolidated on `/contact/`.
+7. Confirm any service beyond installation, repair, and cleaning before creating another page.
+8. Validate demand later with Search Console and a keyword-data provider; update priorities from actual impressions and leads.
 
 ## Research sources
 

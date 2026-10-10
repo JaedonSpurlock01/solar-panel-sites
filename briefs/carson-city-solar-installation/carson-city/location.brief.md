@@ -17,6 +17,7 @@
 - 2026-10-10 — Added the supplied solar-and-mountain logo to the header, favicon, and LocalBusiness schema.
 - 2026-10-10 — Fixed global page styling, added a homepage lead form, and replaced illustration assets with optimized photorealistic imagery.
 - 2026-10-10 — Added solar panel repair and cleaning pages, improved hero contrast, and animated the service menu and FAQs.
+- 2026-10-10 — Fixed CTA and service-menu hover states, expanded local keyword coverage, and simplified published copy for an eighth-grade reading level.
 
 ## Tools run
 

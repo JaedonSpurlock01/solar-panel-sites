@@ -1,0 +1,75 @@
+{
+  "id": "idaho-falls-solar-installation",
+  "niche": {
+    "name": "Solar Panel Installation",
+    "schemaType": "HomeAndConstructionBusiness",
+    "primaryKeyword": "solar panel installation Idaho Falls ID",
+    "primaryCta": "Request a Free Solar Estimate",
+    "projectFieldLabel": "Tell us about your property and the solar service you need",
+    "projectFieldType": "textarea"
+  },
+  "cloudflareProject": "idaho-falls-solar-installation",
+  "leadDeliveryEmail": "spurjae@gmail.com",
+  "leadNotifyEmail": "spurjae@gmail.com",
+  "market": {
+    "localContextLabel": "Cold-climate solar planning",
+    "localContextSummary": "Idaho Falls has sunny high-elevation conditions, snowy winters, strong seasonal temperature changes, wind, and a city-owned electric utility with its own permit and grid-connection process.",
+    "serviceSeasonality": "Estimates and planning are available year-round; rooftop work depends on snow, ice, wind, roof conditions, permits, and utility review.",
+    "customerTypes": [
+      "Homeowners",
+      "Property owners",
+      "Small business property decision-makers"
+    ],
+    "serviceAreaPolicy": "single-city",
+    "latitude": 43.4917,
+    "longitude": -112.03396
+  },
+  "design": {
+    "primary": "#155e75",
+    "primaryDark": "#083344",
+    "accent": "#f59e0b",
+    "ink": "#17252b",
+    "paper": "#f3f7f8",
+    "stickyHeader": true
+  },
+  "assets": {
+    "hero": "src/assets/sites/idaho-falls-solar-installation/hero.webp",
+    "process": "src/assets/sites/idaho-falls-solar-installation/process.webp",
+    "services": {
+      "solar-panel-installation": "src/assets/sites/idaho-falls-solar-installation/solar-panel-installation.webp",
+      "solar-panel-repair": "src/assets/sites/idaho-falls-solar-installation/solar-panel-repair.webp",
+      "solar-panel-cleaning": "src/assets/sites/idaho-falls-solar-installation/solar-panel-cleaning.webp"
+    },
+    "sections": [
+      "src/assets/sites/idaho-falls-solar-installation/site-review.webp",
+      "src/assets/sites/idaho-falls-solar-installation/winter-design.webp",
+      "src/assets/sites/idaho-falls-solar-installation/permit-plans.webp"
+    ]
+  },
+  "business": {
+    "name": "Idaho Falls Solar Installation",
+    "phoneDisplay": "(208) 497-5539",
+    "phoneTel": "+12084975539",
+    "email": "info@idahofallssolarinstallation.com",
+    "city": "Idaho Falls",
+    "region": "ID",
+    "regionName": "Idaho",
+    "country": "US",
+    "domain": "idahofallssolarinstallation.com",
+    "url": "https://idahofallssolarinstallation.com",
+    "priceRange": "Varies by project",
+    "serviceAreaLabel": "Idaho Falls, Idaho"
+  },
+  "hours": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "label": "9 AM–5 PM",
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "label": "Closed"
+    }
+  ]
+}
