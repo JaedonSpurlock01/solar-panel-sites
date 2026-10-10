@@ -1,0 +1,63 @@
+---
+export const prerender = true;
+
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalLinks from "@/components/InternalLinks.astro";
+import { supportingContent } from "@site/content";
+import { site, resolveSiteImage } from "@/data/site";
+
+const processImage = resolveSiteImage(site.assets.process);
+const content = supportingContent.about;
+---
+
+<BaseLayout title={content.seoTitle} description={content.metaDescription} canonicalPath="/about/">
+  <header class="content-hero">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / About</nav>
+      <p class="eyebrow">{site.business.name}</p>
+      <h1>{content.h1}</h1>
+      <p class="lede narrow">{content.introduction}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        {content.sections.map((section) => (
+          <section>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </section>
+        ))}
+      </div>
+      <Image
+        src={processImage}
+        alt={`${site.niche.name} planning materials for ${site.business.serviceAreaLabel}`}
+        width={1600}
+        height={900}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap">
+      <p class="eyebrow">What guides the work</p>
+      <h2>Four practical project values</h2>
+      <div class="grid-3" style="margin-top:2rem">
+        {content.values.map((value) => (
+          <article class="card">
+            <h3>{value.heading}</h3>
+            <p>{value.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap"><InternalLinks /></div>
+  </section>
+</BaseLayout>

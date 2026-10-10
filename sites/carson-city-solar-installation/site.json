@@ -1,0 +1,72 @@
+{
+  "id": "carson-city-solar-installation",
+  "niche": {
+    "name": "Solar Panel Installation",
+    "schemaType": "HomeAndConstructionBusiness",
+    "primaryKeyword": "solar panel installation Carson City NV",
+    "primaryCta": "Request a Free Solar Estimate",
+    "projectFieldLabel": "Tell us about your property, roof, energy use, and solar goals",
+    "projectFieldType": "textarea"
+  },
+  "cloudflareProject": "carson-city-solar-installation",
+  "leadDeliveryEmail": "spurjae@gmail.com",
+  "leadNotifyEmail": "spurjae@gmail.com",
+  "market": {
+    "localContextLabel": "High-desert solar planning",
+    "localContextSummary": "Carson City combines abundant sunshine with cold winters, occasional snow, strong temperature swings, and local structural, electrical, permitting, and utility-interconnection requirements.",
+    "serviceSeasonality": "Consultations and planning are available year-round; field scheduling depends on roof, weather, permit, and utility conditions.",
+    "customerTypes": ["Homeowners", "Property owners", "Small business property decision-makers"],
+    "serviceAreaPolicy": "single-city",
+    "latitude": 39.1638,
+    "longitude": -119.7674
+  },
+  "design": {
+    "primary": "#176452",
+    "primaryDark": "#0b3028",
+    "accent": "#f2b84b",
+    "ink": "#15231f",
+    "paper": "#f3f6f1",
+    "stickyHeader": true
+  },
+  "assets": {
+    "logo": "src/assets/sites/carson-city-solar-installation/logo.png",
+    "hero": "src/assets/sites/carson-city-solar-installation/hero.webp",
+    "process": "src/assets/sites/carson-city-solar-installation/process.webp",
+    "services": {
+      "solar-panel-installation": "src/assets/sites/carson-city-solar-installation/solar-panel-installation.webp",
+      "solar-panel-repair": "src/assets/sites/carson-city-solar-installation/solar-panel-repair.webp",
+      "solar-panel-cleaning": "src/assets/sites/carson-city-solar-installation/solar-panel-cleaning.webp"
+    },
+    "sections": [
+      "src/assets/sites/carson-city-solar-installation/site-assessment.webp",
+      "src/assets/sites/carson-city-solar-installation/system-design.webp",
+      "src/assets/sites/carson-city-solar-installation/permitting.webp"
+    ]
+  },
+  "business": {
+    "name": "Carson City Solar Installation",
+    "phoneDisplay": "(775) 306-4278",
+    "phoneTel": "+17753064278",
+    "email": "info@carsoncitysolarinstallation.com",
+    "city": "Carson City",
+    "region": "NV",
+    "regionName": "Nevada",
+    "country": "US",
+    "domain": "carsoncitysolarinstallation.com",
+    "url": "https://carsoncitysolarinstallation.com",
+    "priceRange": "Varies by project",
+    "serviceAreaLabel": "Carson City, Nevada"
+  },
+  "hours": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "label": "9 AM–5 PM",
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "label": "Closed"
+    }
+  ]
+}

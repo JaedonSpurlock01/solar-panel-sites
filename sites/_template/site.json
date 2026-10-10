@@ -1,0 +1,64 @@
+{
+  "id": "template",
+  "niche": {
+    "name": "Local Service",
+    "schemaType": "LocalBusiness",
+    "primaryKeyword": "local service",
+    "primaryCta": "Request a Quote",
+    "projectFieldLabel": "Project details",
+    "projectFieldType": "textarea"
+  },
+  "cloudflareProject": "replace-before-building",
+  "leadDeliveryEmail": "replace@example.com",
+  "leadNotifyEmail": "",
+  "market": {
+    "localContextLabel": "Local market",
+    "localContextSummary": "Replace with researched local conditions.",
+    "serviceSeasonality": "Confirm before publishing.",
+    "customerTypes": ["Property owners"],
+    "serviceAreaPolicy": "single-city",
+    "latitude": 0,
+    "longitude": 0
+  },
+  "design": {
+    "primary": "#185b50",
+    "primaryDark": "#103f38",
+    "accent": "#e0a62f",
+    "ink": "#17231f",
+    "paper": "#f6f7f2",
+    "stickyHeader": true
+  },
+  "assets": {
+    "hero": "src/assets/sites/template/hero.svg",
+    "process": "src/assets/sites/template/process.svg",
+    "services": {
+      "service": "src/assets/sites/template/service.svg"
+    }
+  },
+  "business": {
+    "name": "Replace Before Building",
+    "phoneDisplay": "(000) 000-0000",
+    "phoneTel": "+10000000000",
+    "email": "info@example.com",
+    "city": "City",
+    "region": "ST",
+    "regionName": "State",
+    "country": "US",
+    "domain": "example.com",
+    "url": "https://example.com",
+    "priceRange": "$$",
+    "serviceAreaLabel": "City, State"
+  },
+  "hours": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "label": "9 AM–5 PM",
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "label": "Closed"
+    }
+  ]
+}

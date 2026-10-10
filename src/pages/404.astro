@@ -1,0 +1,25 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { site } from "@/data/site";
+---
+
+<BaseLayout
+  title={`Page Not Found | ${site.business.name}`}
+  description="The requested page could not be found."
+  canonicalPath="/404/"
+  noindex
+>
+  <section class="content-hero">
+    <div class="wrap narrow">
+      <p class="eyebrow">404 error</p>
+      <h1>That page is not available</h1>
+      <p class="lede">Use the homepage to explore {site.niche.name.toLowerCase()} information, or contact us about your project.</p>
+      <div class="cta-row">
+        <a class="button button--light" href="/">Return home</a>
+        <a class="button" href="/contact/">Contact us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

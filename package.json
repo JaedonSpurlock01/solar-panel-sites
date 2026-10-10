@@ -1,0 +1,23 @@
+{
+  "name": "solar-panel-sites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/sync-config.mjs && astro build",
+    "check": "astro check",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "12.6.13",
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@cloudflare/workers-types": "^5.20261010.1",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.149.0"
+  }
+}

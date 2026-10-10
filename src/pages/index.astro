@@ -1,0 +1,220 @@
+---
+export const prerender = true;
+
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalLinks from "@/components/InternalLinks.astro";
+import LeadForm from "@/components/LeadForm.astro";
+import { homeContent } from "@site/content";
+import { site, services, formattedHours, resolveSiteImage, servicePath } from "@/data/site";
+
+const hero = resolveSiteImage(site.assets.hero);
+const processImage = resolveSiteImage(site.assets.process);
+const sectionImages = (site.assets.sections ?? []).map(resolveSiteImage);
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homeContent.faq.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title={homeContent.seoTitle}
+  description={homeContent.metaDescription}
+  canonicalPath="/"
+  schema={faqSchema}
+>
+  <section class="hero">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <p class="eyebrow">{homeContent.hero.eyebrow}</p>
+        <h1>{homeContent.hero.h1}</h1>
+        <p class="lede">{homeContent.hero.subheading}</p>
+        <div class="cta-row">
+          <a class="button button--light" href="/contact/">{site.niche.primaryCta}</a>
+          <a class="button" href={`tel:${site.business.phoneTel}`}>Call {site.business.phoneDisplay}</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <Image
+          src={hero}
+          alt={`${site.niche.name} on a property in ${site.business.serviceAreaLabel}`}
+          width={1600}
+          height={900}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <div class="fact-strip">
+    <div class="wrap fact-strip__inner">
+      <div class="fact">Single-city focus: {site.business.city}</div>
+      <div class="fact">{site.market.serviceSeasonality}</div>
+      <div class="fact">Call {site.business.phoneDisplay}</div>
+    </div>
+  </div>
+
+  <section class="section section--tint">
+    <div class="wrap split" style="align-items:start">
+      <div>
+        <p class="eyebrow">Start with your property</p>
+        <h2>Request a free {site.business.city} {site.niche.name.toLowerCase()} estimate</h2>
+        <p class="lede">Share the property details, timing, and goals that can help us start a project-specific conversation.</p>
+        <p>Prefer to talk? Call <a class="text-link" href={`tel:${site.business.phoneTel}`}>{site.business.phoneDisplay}</a>. {formattedHours}.</p>
+      </div>
+      <div class="card">
+        <h3>Tell us about your project</h3>
+        <LeadForm />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="narrow">
+        <p class="eyebrow">{homeContent.introduction.eyebrow}</p>
+        <h2>{homeContent.introduction.heading}</h2>
+        {homeContent.introduction.paragraphs.map((paragraph) => <p class="lede">{paragraph}</p>)}
+      </div>
+      <div class="grid-3" style="margin-top:3rem">
+        {homeContent.principles.map((principle, index) => (
+          <article class="card">
+            <span class="card__number">{index + 1}</span>
+            <h3>{principle.heading}</h3>
+            <p>{principle.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section section--tint">
+    <div class="wrap">
+      <p class="eyebrow">{homeContent.services.eyebrow}</p>
+      <h2>{homeContent.services.heading}</h2>
+      <p class="lede narrow">{homeContent.services.introduction}</p>
+      <div class="service-list" style="margin-top:2rem">
+        {services.map((service) => {
+          const image = resolveSiteImage(site.assets.services[service.imageKey]);
+          return (
+            <article class="service-card">
+              <Image
+                src={image}
+                alt={`${service.navigationLabel} in ${site.business.serviceAreaLabel}`}
+                width={1600}
+                height={900}
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="service-card__body">
+                <h3>{service.navigationLabel}</h3>
+                <p>{service.intro}</p>
+                <a class="text-link" href={servicePath(service.slug)}>Explore {service.navigationLabel} →</a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  {homeContent.localSections.map((section, index) => {
+    const image = section.imageIndex === undefined ? undefined : sectionImages[section.imageIndex];
+    return (
+      <section class:list={["section", index % 2 === 1 && "section--tint"]}>
+        <div class:list={["wrap", image && "split"]}>
+          <div class="prose">
+            <p class="eyebrow">{section.eyebrow}</p>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+          </div>
+          {image && (
+            <Image
+              src={image}
+              alt={section.imageAlt ?? `${site.niche.name} planning in ${site.business.city}`}
+              width={1200}
+              height={900}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
+        </div>
+      </section>
+    );
+  })}
+
+  <section class="section section--tint">
+    <div class="wrap split">
+      <Image
+        src={processImage}
+        alt={`${site.niche.name} planning and installation process in ${site.business.city}`}
+        width={1600}
+        height={900}
+        loading="lazy"
+        decoding="async"
+      />
+      <div>
+        <p class="eyebrow">How the project moves forward</p>
+        <h2>A step-by-step {site.niche.name.toLowerCase()} process</h2>
+        <p class="lede">The exact sequence depends on the property and current review requirements, but each project should make these milestones clear.</p>
+      </div>
+    </div>
+    <div class="wrap timeline" style="margin-top:4rem">
+      {homeContent.process.map((step) => (
+        <article>
+          <h3>{step.heading}</h3>
+          <p>{step.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="narrow prose">
+        <p class="eyebrow">{homeContent.pricing.eyebrow}</p>
+        <h2>{homeContent.pricing.heading}</h2>
+        {homeContent.pricing.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <div class="grid-3" style="margin-top:3rem">
+        {homeContent.pricing.factors.map((factor) => (
+          <article class="card">
+            <h3>{factor.heading}</h3>
+            <p>{factor.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Questions from property owners</p>
+        <h2>{site.business.city} {site.niche.name.toLowerCase()} FAQs</h2>
+        <p class="lede">Use these answers as a planning overview. Property conditions and current agency requirements determine the final details.</p>
+      </div>
+      <div class="faq">
+        {homeContent.faq.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <InternalLinks />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { site } from "@/data/site";
+---
+
+<BaseLayout
+  title={`Thank You | ${site.business.name}`}
+  description="Your project request has been received."
+  canonicalPath="/thank-you/"
+  noindex
+>
+  <section class="content-hero">
+    <div class="wrap narrow">
+      <p class="eyebrow">Request received</p>
+      <h1>Thank you for telling us about your project</h1>
+      <p class="lede">Your form was submitted. If you need to add a detail, call <a href={`tel:${site.business.phoneTel}`}>{site.business.phoneDisplay}</a> during business hours.</p>
+      <div class="cta-row">
+        <a class="button button--light" href="/">Return home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

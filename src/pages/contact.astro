@@ -1,0 +1,49 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LeadForm from "@/components/LeadForm.astro";
+import InternalLinks from "@/components/InternalLinks.astro";
+import { supportingContent } from "@site/content";
+import { site, formattedHours } from "@/data/site";
+
+const content = supportingContent.contact;
+---
+
+<BaseLayout title={content.seoTitle} description={content.metaDescription} canonicalPath="/contact/">
+  <header class="content-hero">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Contact</nav>
+      <p class="eyebrow">{site.business.serviceAreaLabel}</p>
+      <h1>{content.h1}</h1>
+      <p class="lede narrow">{content.introduction}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap split" style="align-items:start">
+      <div>
+        <p class="eyebrow">Helpful details</p>
+        <h2>What to include with your request</h2>
+        <ul>
+          {content.expectations.map((item) => <li>{item}</li>)}
+        </ul>
+        <div class="card" style="margin-top:2rem">
+          <h3>Call or email</h3>
+          <p><a class="text-link" href={`tel:${site.business.phoneTel}`}>{site.business.phoneDisplay}</a></p>
+          <p><a class="text-link" href={`mailto:${site.business.email}`}>{site.business.email}</a></p>
+          <p>{formattedHours}</p>
+          <p>Service area: {site.business.serviceAreaLabel}</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>{site.niche.primaryCta}</h2>
+        <LeadForm />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap"><InternalLinks /></div>
+  </section>
+</BaseLayout>

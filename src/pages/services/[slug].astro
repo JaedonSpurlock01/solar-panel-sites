@@ -1,0 +1,113 @@
+---
+export const prerender = true;
+
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalLinks from "@/components/InternalLinks.astro";
+import { site, services, resolveSiteImage, servicePath } from "@/data/site";
+import type { Service } from "@/data/types";
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+const image = resolveSiteImage(site.assets.services[service.imageKey]);
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: service.navigationLabel,
+  description: service.metaDescription,
+  url: new URL(servicePath(service.slug), site.business.url).toString(),
+  provider: {
+    "@type": site.niche.schemaType,
+    name: site.business.name,
+    url: site.business.url,
+    telephone: site.business.phoneTel,
+  },
+  areaServed: {
+    "@type": "City",
+    name: `${site.business.city}, ${site.business.regionName}`,
+  },
+  serviceType: service.navigationLabel,
+};
+---
+
+<BaseLayout
+  title={service.seoTitle}
+  description={service.metaDescription}
+  canonicalPath={servicePath(service.slug)}
+  schema={serviceSchema}
+>
+  <header class="content-hero">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Services / {service.navigationLabel}</nav>
+      <p class="eyebrow">{site.business.serviceAreaLabel}</p>
+      <h1>{service.h1}</h1>
+      <p class="lede narrow">{service.intro}</p>
+      <div class="cta-row">
+        <a class="button button--light" href="/contact/">{site.niche.primaryCta}</a>
+        <a class="button" href={`tel:${site.business.phoneTel}`}>Call {site.business.phoneDisplay}</a>
+      </div>
+    </div>
+  </header>
+
+  <article class="section">
+    <div class="wrap">
+      <Image
+        class="service-image"
+        src={image}
+        alt={`${service.navigationLabel} for a property in ${site.business.serviceAreaLabel}`}
+        width={1600}
+        height={900}
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="prose narrow">
+        {service.sections.map((section) => (
+          <section>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+          </section>
+        ))}
+        <p>
+          Learn more about <a href="/">{site.niche.primaryKeyword}</a>, or
+          <a href="/contact/"> contact us for a property-specific estimate</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  {service.faq.length > 0 && (
+    <section class="section section--tint">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Service questions</p>
+          <h2>{service.navigationLabel} FAQs</h2>
+        </div>
+        <div class="faq">
+          {service.faq.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="wrap">
+      <InternalLinks currentSlug={service.slug} />
+    </div>
+  </section>
+</BaseLayout>
