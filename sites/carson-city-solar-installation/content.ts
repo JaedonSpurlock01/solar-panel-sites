@@ -6,13 +6,13 @@ export const homeContent: HomeContent = {
     "Request a free solar panel installation estimate in Carson City, Nevada. Start planning your design, permits, installation, and grid connection.",
   hero: {
     eyebrow: "Carson City, Nevada solar planning",
-    h1: "Solar Panel Installation Designed Around Your Carson City Property",
+    h1: "Solar Panel Installation & Repair in Carson City",
     subheading:
       "Start with a clear look at your roof or available land, electricity use, shade, electrical equipment, and project goals. Call or request a free estimate for solar panel installation in Carson City.",
   },
   introduction: {
     eyebrow: "A better starting point",
-    heading: "Plan the whole solar project—not just the panel count",
+    heading: "Plan the whole solar project, not just the panel count",
     paragraphs: [
       "Solar panel installation in Carson City starts with more than choosing equipment from a catalog. A useful plan looks at your energy use, available space, roof or ground conditions, wiring, city permits, and NV Energy’s grid connection process. Each detail can change the layout, schedule, and price.",
       "Carson City Solar Installation gives local property owners a direct way to begin that conversation. Bring recent electric bills if you have them, explain why you are considering solar, and share what you know about the roof, shade, and electrical service. The first goal is to identify the questions that must be answered before anyone treats a concept as an installation-ready design.",

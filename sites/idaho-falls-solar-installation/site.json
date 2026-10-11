@@ -33,6 +33,7 @@
     "stickyHeader": true
   },
   "assets": {
+    "logo": "src/assets/sites/idaho-falls-solar-installation/logo.png",
     "hero": "src/assets/sites/idaho-falls-solar-installation/hero.webp",
     "process": "src/assets/sites/idaho-falls-solar-installation/process.webp",
     "services": {
