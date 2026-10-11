@@ -51,7 +51,7 @@ export const services: Service[] = [
       {
         heading: "What affects solar installation cost",
         paragraphs: [
-          "Solar panel installation cost in Idaho Falls depends on the system size, equipment, roof or ground conditions, access, electrical work, engineering, permits, and utility steps. Two homes with the same number of panels can have different prices because the roofs and electrical systems are different.",
+          "{{outbound:carson-city-solar}} cost in Idaho Falls depends on the system size, equipment, roof or ground conditions, access, electrical work, engineering, permits, and utility steps. Two homes with the same number of panels can have different prices because the roofs and electrical systems are different.",
           "Ask for a written plan that lists included work and anything that could cost extra. It should cover design, equipment, mounting, permits, installation, inspection, grid-connection work, and cleanup. It should also explain how roof repairs, electrical changes, trenching, or requested plan changes would be handled.",
           "Do not rely on an old tax-credit claim when comparing prices. Current IRS guidance says the Residential Clean Energy Credit is not available for new systems placed in service after December 31, 2025. Check current official guidance and ask a tax professional about your own situation.",
         ],

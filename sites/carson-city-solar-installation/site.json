@@ -57,6 +57,13 @@
     "priceRange": "Varies by project",
     "serviceAreaLabel": "Carson City, Nevada"
   },
+  "outboundLinks": [
+    {
+      "id": "california-solar-exit",
+      "href": "https://www.californiasolarexit.com/",
+      "label": "Solar Panel Cancellation"
+    }
+  ],
   "hours": [
     {
       "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

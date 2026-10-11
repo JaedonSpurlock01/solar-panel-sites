@@ -68,7 +68,7 @@ export const services: Service[] = [
       {
         heading: "Start with a property-specific estimate",
         paragraphs: [
-          "If you are comparing solar panel installation options in Carson City, begin with the facts that matter at your address. Share your property type, roof age and material if known, approximate electricity use, and the reason you are considering solar. Photos and utility bills may help with the initial discussion, but they do not replace an on-site or technical evaluation when one is needed.",
+          "If you are comparing {{outbound:california-solar-exit}} options in Carson City, begin with the facts that matter at your address. Share your property type, roof age and material if known, approximate electricity use, and the reason you are considering solar. Photos and utility bills may help with the initial discussion, but they do not replace an on-site or technical evaluation when one is needed.",
           "Call Carson City Solar Installation at (775) 306-4278 or use the contact form to request a free estimate. You will have a clearer starting point for discussing the possible layout, project variables, and next steps without relying on generic claims about savings or system performance.",
         ],
       },

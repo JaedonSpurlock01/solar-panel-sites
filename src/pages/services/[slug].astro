@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import InternalLinks from "@/components/InternalLinks.astro";
 import { site, services, resolveSiteImage, servicePath } from "@/data/site";
+import { renderOutboundText } from "@/data/rich-text";
 import type { Service } from "@/data/types";
 
 export function getStaticPaths() {
@@ -74,7 +75,7 @@ const serviceSchema = {
         {service.sections.map((section) => (
           <section>
             <h2>{section.heading}</h2>
-            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {section.paragraphs.map((paragraph) => <p set:html={renderOutboundText(paragraph)} />)}
             {section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
           </section>
         ))}

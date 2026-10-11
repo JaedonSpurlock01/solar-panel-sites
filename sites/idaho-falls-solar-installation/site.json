@@ -61,6 +61,13 @@
     "priceRange": "Varies by project",
     "serviceAreaLabel": "Idaho Falls, Idaho"
   },
+  "outboundLinks": [
+    {
+      "id": "carson-city-solar",
+      "href": "https://carsoncitysolarinstallation.com/",
+      "label": "Solar Panel Installation"
+    }
+  ],
   "hours": [
     {
       "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

@@ -76,4 +76,9 @@ export interface SiteConfig {
     opens?: string;
     closes?: string;
   }>;
+  outboundLinks?: Array<{
+    id: string;
+    href: string;
+    label: string;
+  }>;
 }
