@@ -10,19 +10,6 @@ const redirect = (request: Request, path: string) =>
 const value = (form: FormData, key: string) =>
   String(form.get(key) ?? "").trim();
 
-const escapeHtml = (input: string) =>
-  input.replace(
-    /[&<>"']/g,
-    (character) =>
-      ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#039;",
-      })[character] ?? character,
-  );
-
 export const POST: APIRoute = async ({ request }) => {
   const form = await request.formData();
 
@@ -59,55 +46,40 @@ export const POST: APIRoute = async ({ request }) => {
     return redirect(request, "/contact/?error=1#error-fields");
   }
 
-  if (!env.LEAD_EMAIL) {
-    return redirect(request, "/contact/?error=bind#error-bind");
-  }
-  if (!env.LEAD_DELIVERY_EMAIL) {
+  // Tracer stores the submission under this Site's Workspace, forwards it to the business
+  // from this Site's address, and counts it as a lead. Every Site shares one Forms key and
+  // names itself by hostname.
+  const formsUrl = env.TRACER_FORMS_URL?.trim();
+  const formKey = env.TRACER_FORM_KEY?.trim();
+  if (!formsUrl || !formKey) {
     return redirect(request, "/contact/?error=config#error-config");
   }
 
-  const submitted = { name, phone, email, service, projectDetails };
-  const text = [
-    `New ${site.niche.name} lead`,
-    "",
-    `Name: ${name}`,
-    `Phone: ${phone}`,
-    `Email: ${email}`,
-    `Service: ${service}`,
-    `${site.niche.projectFieldLabel}:`,
-    projectDetails,
-  ].join("\n");
-  const html = `
-    <h1>New ${escapeHtml(site.niche.name)} lead</h1>
-    <dl>
-      <dt>Name</dt><dd>${escapeHtml(name)}</dd>
-      <dt>Phone</dt><dd>${escapeHtml(phone)}</dd>
-      <dt>Email</dt><dd>${escapeHtml(email)}</dd>
-      <dt>Service</dt><dd>${escapeHtml(service)}</dd>
-      <dt>${escapeHtml(site.niche.projectFieldLabel)}</dt>
-      <dd>${escapeHtml(projectDetails).replace(/\n/g, "<br>")}</dd>
-    </dl>
-  `;
-  const notify = env.LEAD_NOTIFY_EMAIL?.trim();
+  const submission = {
+    site: site.business.domain,
+    submissionId: crypto.randomUUID(),
+    page: new URL(request.headers.get("referer") ?? "/contact/", request.url).pathname,
+    fields: {
+      Name: name,
+      Phone: phone,
+      Email: email,
+      Service: service,
+      [site.niche.projectFieldLabel]: projectDetails,
+    },
+  };
 
   try {
-    await env.LEAD_EMAIL.send({
-      from: { email: site.business.email, name: site.business.name },
-      to: env.LEAD_DELIVERY_EMAIL,
-      ...(notify && notify !== env.LEAD_DELIVERY_EMAIL ? { bcc: notify } : {}),
-      replyTo: email,
-      subject: `New ${service} lead from ${name}`,
-      text,
-      html,
+    const response = await fetch(formsUrl, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: `Bearer ${formKey}` },
+      body: JSON.stringify(submission),
     });
+    if (!response.ok) {
+      console.error(JSON.stringify({ message: "Tracer refused the lead", status: response.status, body: await response.text().catch(() => "") }));
+      return redirect(request, "/contact/?error=send#error-send");
+    }
   } catch (error) {
-    console.error(
-      JSON.stringify({
-        message: "LEAD_EMAIL send failed:",
-        error: error instanceof Error ? error.message : String(error),
-        submission: { ...submitted, projectDetails: "[redacted]" },
-      }),
-    );
+    console.error(JSON.stringify({ message: "Tracer lead post failed", error: error instanceof Error ? error.message : String(error) }));
     return redirect(request, "/contact/?error=send#error-send");
   }
 

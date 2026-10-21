@@ -30,8 +30,8 @@ export interface SiteConfig {
     projectFieldOptions?: string[];
   };
   cloudflareProject: string;
-  leadDeliveryEmail: string;
-  leadNotifyEmail: string;
+  /** Tracer's public forms endpoint, e.g. https://tracer.example.com/api/forms */
+  tracerFormsUrl: string;
   market: {
     localContextLabel: string;
     localContextSummary: string;

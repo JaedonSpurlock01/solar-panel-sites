@@ -9,13 +9,16 @@
     "projectFieldType": "textarea"
   },
   "cloudflareProject": "carson-city-solar-installation",
-  "leadDeliveryEmail": "spurjae@gmail.com",
-  "leadNotifyEmail": "spurjae@gmail.com",
+  "tracerFormsUrl": "https://tracer-staging.jaedonaspurlock.workers.dev/api/forms",
   "market": {
     "localContextLabel": "High-desert solar planning",
     "localContextSummary": "Carson City combines abundant sunshine with cold winters, occasional snow, strong temperature swings, and local structural, electrical, permitting, and utility-interconnection requirements.",
     "serviceSeasonality": "Consultations and planning are available year-round; field scheduling depends on roof, weather, permit, and utility conditions.",
-    "customerTypes": ["Homeowners", "Property owners", "Small business property decision-makers"],
+    "customerTypes": [
+      "Homeowners",
+      "Property owners",
+      "Small business property decision-makers"
+    ],
     "serviceAreaPolicy": "single-city",
     "latitude": 39.1638,
     "longitude": -119.7674
@@ -66,13 +69,22 @@
   ],
   "hours": [
     {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
       "label": "9 AM–5 PM",
       "opens": "09:00",
       "closes": "17:00"
     },
     {
-      "days": ["Saturday", "Sunday"],
+      "days": [
+        "Saturday",
+        "Sunday"
+      ],
       "label": "Closed"
     }
   ]

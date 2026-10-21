@@ -9,13 +9,14 @@
     "projectFieldType": "textarea"
   },
   "cloudflareProject": "replace-before-building",
-  "leadDeliveryEmail": "replace@example.com",
-  "leadNotifyEmail": "",
+  "tracerFormsUrl": "https://tracer.example.com/api/forms",
   "market": {
     "localContextLabel": "Local market",
     "localContextSummary": "Replace with researched local conditions.",
     "serviceSeasonality": "Confirm before publishing.",
-    "customerTypes": ["Property owners"],
+    "customerTypes": [
+      "Property owners"
+    ],
     "serviceAreaPolicy": "single-city",
     "latitude": 0,
     "longitude": 0
@@ -51,13 +52,22 @@
   },
   "hours": [
     {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
       "label": "9 AM–5 PM",
       "opens": "09:00",
       "closes": "17:00"
     },
     {
-      "days": ["Saturday", "Sunday"],
+      "days": [
+        "Saturday",
+        "Sunday"
+      ],
       "label": "Closed"
     }
   ]

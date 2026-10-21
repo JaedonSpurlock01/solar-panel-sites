@@ -9,8 +9,7 @@
     "projectFieldType": "textarea"
   },
   "cloudflareProject": "idaho-falls-solar-installation",
-  "leadDeliveryEmail": "spurjae@gmail.com",
-  "leadNotifyEmail": "spurjae@gmail.com",
+  "tracerFormsUrl": "https://tracer-staging.jaedonaspurlock.workers.dev/api/forms",
   "market": {
     "localContextLabel": "Cold-climate solar planning",
     "localContextSummary": "Idaho Falls has sunny high-elevation conditions, snowy winters, strong seasonal temperature changes, wind, and a city-owned electric utility with its own permit and grid-connection process.",
@@ -70,13 +69,22 @@
   ],
   "hours": [
     {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
       "label": "9 AM–5 PM",
       "opens": "09:00",
       "closes": "17:00"
     },
     {
-      "days": ["Saturday", "Sunday"],
+      "days": [
+        "Saturday",
+        "Sunday"
+      ],
       "label": "Closed"
     }
   ]

@@ -15,9 +15,9 @@ The build regenerates that site's `wrangler.jsonc` from `site.json`.
 - Root directory: `/`
 - Environment variable: `SITE=<site-id>`
 - Build command: `npm run build`
-- Deploy command: `npx wrangler deploy -c sites/<site-id>/wrangler.jsonc`
+- Deploy command: `TRACER_FORM_KEY=<Forms key> SITE=<site-id> npm run deploy` (the key comes from Tracer under Integrations, Cloudflare, and is the same for every site)
 
-`SITE` is the only manual build-selection variable. Update lead routing, business information, and the Worker name in `site.json`; do not edit generated Wrangler files.
+`SITE` is the only manual build-selection variable. Update the Tracer forms URL (`tracerFormsUrl`), business information, and the Worker name in `site.json`; do not edit generated Wrangler files. Contact-form leads post to Tracer, which stores them under the site's Workspace, emails the business from the site's `info@` address, and counts them as leads; forwarding recipients live in Tracer, not here.
 
 ## Add a site
 
