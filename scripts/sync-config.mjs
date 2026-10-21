@@ -3,11 +3,7 @@ import { resolve } from "node:path";
 import { loadSite } from "./load-site.mjs";
 
 const { config, directory } = loadSite();
-const destinations = [
-  config.business.email,
-  config.leadDeliveryEmail,
-  config.leadNotifyEmail,
-].filter((value, index, values) => value && values.indexOf(value) === index);
+if (!config.tracerFormsUrl) throw new Error(`sites/${config.id}/site.json needs tracerFormsUrl`);
 
 const wrangler = {
   $schema: "../../node_modules/wrangler/config-schema.json",
@@ -23,16 +19,8 @@ const wrangler = {
     binding: "ASSETS",
   },
   vars: {
-    LEAD_DELIVERY_EMAIL: config.leadDeliveryEmail,
-    LEAD_NOTIFY_EMAIL: config.leadNotifyEmail,
+    TRACER_FORMS_URL: config.tracerFormsUrl,
   },
-  send_email: [
-    {
-      name: "LEAD_EMAIL",
-      allowed_sender_addresses: [config.business.email],
-      allowed_destination_addresses: destinations,
-    },
-  ],
   observability: {
     enabled: true,
     logs: { enabled: true, head_sampling_rate: 1 },
